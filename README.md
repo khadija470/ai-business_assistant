@@ -38,9 +38,9 @@ Ton : professionnel et concis.
 ```
 
 ### Réponse du LLM (Gemini)
-![Réponse Partie 1 - partie 1](captures/p1_analyse_retours_1.png)
-![Réponse Partie 1 - partie 2](captures/p1_analyse_retours_2.png)
-![Réponse Partie 1 - partie 3](captures/p1_analyse_retours_3.png)
+![Réponse Partie 1 - partie 1](captures/p1_analyse_retours_1.PNG)
+![Réponse Partie 1 - partie 2](captures/p1_analyse_retours_2.PNG)
+![Réponse Partie 1 - partie 3](captures/p1_analyse_retours_3.PNG)
 
 ### Commentaire
 Le découpage en composantes rend le prompt clair et réutilisable : on peut changer les données d'entrée sans toucher au reste, et ajuster une seule contrainte pour modifier le comportement du modèle.
