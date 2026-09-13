@@ -74,3 +74,33 @@ justification en une phrase, aucune information inventée.
 
 ### Commentaire
 Les quatre techniques classent le commentaire comme **négatif** (le défaut « application qui plante » domine l'aspect positif « service rapide »). Plus on fournit d'exemples et de structure, plus la réponse est **stable, concise et justifiée** : le zero-shot donne une réponse correcte mais parfois hésitante, tandis que le prompt structuré fournit directement la classe **et** une justification exploitable par une application.
+
+
+## Partie 3 – Prompt Engineering et raisonnement
+
+### 1. Décomposer un prompt
+
+Un prompt vague donne des réponses désorganisées. **Décomposer** consiste à découper la tâche en sous-étapes explicites et ordonnées, pour guider le raisonnement du modèle.
+
+Prompt initial vague : « Analyse ces avis clients et donne-moi les problèmes les plus importants ainsi que les recommandations. »
+
+Version décomposée : extraire les thèmes → identifier le problème par thème → évaluer l'importance (fréquence + gravité) → classer les problèmes → proposer une recommandation par problème majeur.
+
+![Décomposition 1](captures/p3_decomposition_1.PNG)
+![Décomposition 2](captures/p3_decomposition_2.PNG)
+![Décomposition 3](captures/p3_decomposition_3.PNG)
+![Décomposition 4](captures/p3_decomposition_4.PNG)
+
+### 2. Analyse puis auto-vérification
+
+**Prompt A** — analyse d'un texte avec contraintes (max 80 mots, chiffres exacts, aucune invention, ton neutre).
+
+![Analyse avec contraintes](captures/p3_analyse_1.PNG)
+
+**Prompt B** — on demande au modèle de **vérifier sa propre réponse** : informations non justifiées, contradictions, omissions, hallucinations, respect des contraintes.
+
+![Auto-vérification 1](captures/p3_verification_1.PNG)
+![Auto-vérification 2](captures/p3_verification_2.PNG)
+
+### Commentaire
+Décomposer un prompt améliore la structure et la fiabilité de la réponse. L'auto-vérification est une technique clé du prompt engineering : elle pousse le modèle à relire sa production et à détecter ses propres erreurs (hallucinations, non-respect des contraintes), ce qui augmente la fiabilité des sorties dans une application métier.
