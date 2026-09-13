@@ -104,3 +104,21 @@ Version décomposée : extraire les thèmes → identifier le problème par thè
 
 ### Commentaire
 Décomposer un prompt améliore la structure et la fiabilité de la réponse. L'auto-vérification est une technique clé du prompt engineering : elle pousse le modèle à relire sa production et à détecter ses propres erreurs (hallucinations, non-respect des contraintes), ce qui augmente la fiabilité des sorties dans une application métier.
+## Partie 4 – Sorties structurées
+
+Pour qu'une réponse soit exploitable par une application, on demande au modèle de répondre en **JSON** (format structuré lisible par un programme) plutôt qu'en texte libre.
+
+### 1. Réponse au format JSON
+
+On impose les champs `sentiment`, `categorie`, `urgence`, `probleme`, `confiance`, avec leurs types et leurs valeurs autorisées.
+
+![Réponse JSON](captures/p4_json_1.PNG)
+
+### 2. JSON avec règles de validation
+
+On ajoute des règles strictes : JSON valide uniquement, aucune propriété supplémentaire, `sentiment` ∈ {positif, negatif, neutre}, `urgence` ∈ {faible, moyenne, elevee}, `confiance` entre 0 et 1.
+
+![Réponse JSON validée](captures/p4_json_2.PNG)
+
+### Commentaire
+Imposer un format JSON avec des types et des valeurs autorisées rend la sortie du modèle directement exploitable par une application (parsing automatique, contrôle de validité). Les règles de validation réduisent les erreurs et garantissent une structure stable en sortie.
