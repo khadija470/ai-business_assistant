@@ -156,3 +156,61 @@ Objectifs : reconnaître le retard, s'excuser, expliquer sans inventer, proposer
 
 ### Commentaire
 Chaque tâche métier repose sur des composantes de prompt adaptées : contraintes de longueur et de contenu pour le résumé et l'email, format JSON pour la classification et l'extraction. Définir clairement objectifs, contraintes et format de sortie permet d'obtenir des réponses directement exploitables dans un contexte professionnel.
+
+
+
+## Partie 6 – Prompt Engineering pour le Machine Learning
+
+Cette partie applique le prompt engineering à des tâches de data science, à partir du dataset des capteurs d'un bâtiment.
+
+### 1. Stratégies de traitement des données
+Détection, traitement et risques associés pour les valeurs manquantes, les doublons, les valeurs aberrantes et les variables catégorielles.
+
+![Stratégies de nettoyage 1](captures/p6_1_1.PNG)
+![Stratégies de nettoyage 2](captures/p6_1_2.PNG)
+![Stratégies de nettoyage 3](captures/p6_1_3.PNG)
+![Stratégies de nettoyage 4](captures/p6_1_4.PNG)
+
+### 2. Visualisations pertinentes
+Pour chaque visualisation : type de graphique, variables utilisées, objectif et interprétation attendue.
+
+![Visualisations 1](captures/p6_2_1.PNG)
+![Visualisations 2](captures/p6_2_2.PNG)
+![Visualisations 3](captures/p6_2_3.PNG)
+![Visualisations 4](captures/p6_2_4.PNG)
+
+### 3. Modèles de prédiction de la consommation
+Pour chaque modèle : principe, avantages, limites, type de problème et métriques pertinentes.
+
+![Modèles 1](captures/p6_3_1.PNG)
+![Modèles 2](captures/p6_3_2.PNG)
+![Modèles 3](captures/p6_3_3.PNG)
+![Modèles 4](captures/p6_3_4.PNG)
+![Modèles 5](captures/p6_3_5.PNG)
+![Modèles 6](captures/p6_3_6.PNG)
+
+### 4. Métriques de classification
+Accuracy, Precision, Recall, F1-score, ROC-AUC : définition, interprétation, exemple concret et contexte d'utilisation.
+
+![Métriques classification 1](captures/p6_4_1.PNG)
+![Métriques classification 2](captures/p6_4_2.PNG)
+![Métriques classification 3](captures/p6_4_3.PNG)
+![Métriques classification 4](captures/p6_4_4.PNG)
+![Métriques classification 5](captures/p6_4_5.PNG)
+![Métriques classification 6](captures/p6_4_6.PNG)
+![Métriques classification 7](captures/p6_4_7.PNG)
+![Métriques classification 8](captures/p6_4_8.PNG)
+
+### 5. Métriques de régression
+MAE, MSE, RMSE : définition, interprétation, exemple concret et contexte d'utilisation.
+
+![Métriques régression 1](captures/p6_5_1.PNG)
+![Métriques régression 2](captures/p6_5_2.PNG)
+![Métriques régression 3](captures/p6_5_3.PNG)
+![Métriques régression 4](captures/p6_5_4.PNG)
+![Métriques régression 5](captures/p6_5_5.PNG)
+![Métriques régression 6](captures/p6_5_6.PNG)
+![Métriques régression 7](captures/p6_5_7.PNG)
+
+### Commentaire
+Le prompt engineering permet d'obtenir du modèle des explications structurées et des recommandations méthodologiques en data science. En imposant une grille de lecture claire (définition, interprétation, exemple, contexte pour les métriques ; principe, avantages, limites pour les modèles), on obtient des réponses pédagogiques et directement réutilisables.
