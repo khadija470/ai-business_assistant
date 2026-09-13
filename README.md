@@ -241,3 +241,28 @@ On impose d'utiliser uniquement le document, de ne rien inventer, de signaler un
 
 ### Commentaire
 Sans le document (A), le modèle produit une réponse peu fiable, non ancrée dans les faits. Avec le document (B), la réponse devient exacte. Avec le document et des contraintes (C), la réponse est non seulement exacte mais aussi **traçable** (citation du passage) et **honnête** (signalement des informations absentes) : c'est le principe fondamental du RAG pour des applications fiables.
+
+
+
+
+## Partie 8 – Évaluation et optimisation des prompts
+
+On résume le même texte avec trois prompts de qualité croissante, puis on compare les résultats pour évaluer l'impact du prompt sur la sortie.
+
+### Prompt A — « Résume ce texte. »
+Prompt minimaliste : le résumé est correct mais sa longueur et sa structure ne sont pas maîtrisées.
+
+![Évaluation - Prompt A](captures/p8_A.PNG)
+
+### Prompt B — « Résume ce texte en 150 mots. »
+L'ajout d'une contrainte de longueur rend la sortie plus prévisible.
+
+![Évaluation - Prompt B](captures/p8_B.PNG)
+
+### Prompt C — prompt complet (rôle, contraintes, format)
+Rôle défini, contrainte de longueur, conservation des chiffres et structure imposée en 3 points : la sortie est la plus précise et la plus exploitable.
+
+![Évaluation - Prompt C](captures/p8_C.PNG)
+
+### Commentaire
+La qualité de la réponse augmente avec la richesse du prompt. Le prompt A donne un résumé non maîtrisé ; le prompt B contrôle la longueur ; le prompt C, en ajoutant un rôle, des contraintes précises et un format structuré, produit la synthèse la plus fiable et directement utilisable. **Évaluer et itérer sur ses prompts** est donc essentiel pour obtenir des résultats de qualité.
