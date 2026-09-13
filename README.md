@@ -214,3 +214,30 @@ MAE, MSE, RMSE : définition, interprétation, exemple concret et contexte d'uti
 
 ### Commentaire
 Le prompt engineering permet d'obtenir du modèle des explications structurées et des recommandations méthodologiques en data science. En imposant une grille de lecture claire (définition, interprétation, exemple, contexte pour les métriques ; principe, avantages, limites pour les modèles), on obtient des réponses pédagogiques et directement réutilisables.
+
+
+
+
+## Partie 7 – Prompt Engineering et RAG
+
+Le **RAG** (Retrieval-Augmented Generation) consiste à fournir un document au modèle pour qu'il réponde en s'appuyant dessus, plutôt que sur sa mémoire. On compare trois versions du même besoin.
+
+**Question posée :** « Combien de jours de congés consécutifs un salarié peut-il prendre au maximum, et qui valide les demandes ? »
+
+### Prompt A — sans le document
+Le modèle répond de mémoire, sans accès au document : réponse générique ou inventée.
+
+![RAG - sans document](captures/p7_A.PNG)
+
+### Prompt B — avec le document
+Le document est fourni : le modèle peut répondre correctement à partir du contenu réel.
+
+![RAG - avec document](captures/p7_B.PNG)
+
+### Prompt C — avec le document et des contraintes
+On impose d'utiliser uniquement le document, de ne rien inventer, de signaler une information manquante et de citer le passage utilisé.
+
+![RAG - avec document et contraintes](captures/p7_C.PNG)
+
+### Commentaire
+Sans le document (A), le modèle produit une réponse peu fiable, non ancrée dans les faits. Avec le document (B), la réponse devient exacte. Avec le document et des contraintes (C), la réponse est non seulement exacte mais aussi **traçable** (citation du passage) et **honnête** (signalement des informations absentes) : c'est le principe fondamental du RAG pour des applications fiables.
