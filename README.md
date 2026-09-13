@@ -122,3 +122,37 @@ On ajoute des règles strictes : JSON valide uniquement, aucune propriété supp
 
 ### Commentaire
 Imposer un format JSON avec des types et des valeurs autorisées rend la sortie du modèle directement exploitable par une application (parsing automatique, contrôle de validité). Les règles de validation réduisent les erreurs et garantissent une structure stable en sortie.
+
+
+
+## Partie 5 – Prompts pour les applications métier
+
+Cette partie applique le prompt engineering à cinq tâches métier concrètes.
+
+### 1. Résumé de document
+Contraintes : max 250 mots, informations factuelles conservées, objectifs / résultats / recommandations identifiés, aucune invention.
+
+![Résumé de document](captures/p5_1.PNG)
+
+### 2. Traduction FR → EN
+Contraintes : sens et structure conservés, termes techniques conservés, pas de résumé, aucun ajout.
+
+![Traduction](captures/p5_2.PNG)
+
+### 3. Classification d'un ticket informatique
+Sortie JSON avec les champs `categorie` et `justification` (catégories : reseau, logiciel, materiel, securite, acces, autre).
+
+![Classification de ticket](captures/p5_3.PNG)
+
+### 4. Extraction des données d'une facture
+Extraction en JSON (numero_facture, date, client, montant_ht, tva, montant_ttc), avec `null` si une information est absente.
+
+![Extraction de facture](captures/p5_4.PNG)
+
+### 5. Rédaction d'un email de retard de livraison
+Objectifs : reconnaître le retard, s'excuser, expliquer sans inventer, proposer une solution. Ton professionnel et courtois, max 150 mots.
+
+![Email de retard](captures/p5_5.PNG)
+
+### Commentaire
+Chaque tâche métier repose sur des composantes de prompt adaptées : contraintes de longueur et de contenu pour le résumé et l'email, format JSON pour la classification et l'extraction. Définir clairement objectifs, contraintes et format de sortie permet d'obtenir des réponses directement exploitables dans un contexte professionnel.
